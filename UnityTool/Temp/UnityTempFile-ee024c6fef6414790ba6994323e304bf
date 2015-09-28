@@ -4,7 +4,6 @@
 -out:'Temp/Assembly-CSharp.dll'
 -r:'/Applications/Unity-5.0.1/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll'
 -r:'/Applications/Unity-5.0.1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
--r:'/Applications/Unity-5.0.1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll'
 -r:'/Applications/Unity-5.0.1/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll'
 -r:'/Applications/Unity-5.0.1/Unity.app/Contents/PlaybackEngines/iossupport/UnityEditor.iOS.Extensions.Xcode.dll'
 -define:UNITY_5_0_1
@@ -58,7 +57,8 @@
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
 -define:UNITY_PRO_LICENSE
-'Assets/NewBehaviourScript.cs'
-'Assets/NewBehaviourScript1.cs'
+'Assets/Script/NewBehaviourScript.cs'
+'Assets/Script/Util/ColorConst.cs'
+'Assets/Script/Util/Singleton.cs'
 -r:'/Applications/Unity-5.0.1/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity-5.0.1/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\NewBehaviourScript.cs" />
+     <Compile Include="Assets\Script\Util\ColorConst.cs" />
      <Compile Include="Assets\Script\Util\Singleton.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity-5.0.1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
