@@ -13,17 +13,18 @@ using Object = UnityEngine.Object;
 
 public class Util
 {
-	//不同平台下StreamingAssets的路径是不同的，这里需要注意一下。 
-	public static readonly string PathURL = 
-	#if UNITY_ANDROID 
-	"jar:file://" + Application.dataPath + "!/assets/"; 
-	#elif UNITY_IPHONE 
-	Application.dataPath + "/Raw/"; 
-	#elif UNITY_STANDALONE_WIN || UNITY_EDITOR 
-	"file://" + Application.dataPath + "/StreamingAssets/"; 
-	#else 
-	string.Empty; 
-	#endif
+
+//	//不同平台下StreamingAssets的路径是不同的，这里需要注意一下。 
+//	public static readonly string PathURL = 
+//	#if UNITY_ANDROID 
+//	"jar:file://" + Application.dataPath + "!/assets/"; 
+//	#elif UNITY_IPHONE 
+//	Application.dataPath + "/Raw/"; 
+//	#elif UNITY_STANDALONE_WIN || UNITY_EDITOR 
+//	"file://" + Application.dataPath + "/StreamingAssets/"; 
+//	#else 
+//	string.Empty; 
+//	#endif
 
 	/// <summary>
 	/// 数字格式化，小于10 的 数字前面加0
@@ -146,6 +147,7 @@ public class Util
 		TextAsset asset = Resources.Load<TextAsset>(path);
 		string[] lines = asset.text.Split(new char[]{ '\r', '\n' });
 		Dictionary<string, string> dic = String2Map(lines);
+		return dic;
 	}
 
 	/// <summary>
