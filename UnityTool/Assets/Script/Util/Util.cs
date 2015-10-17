@@ -167,4 +167,25 @@ public class Util
 		return map;
 	}
 
+	/// <summary>
+	/// 计算一个点的list的距离  包含一个其他点
+	/// </summary>
+	public static float Vector3ListDistance(List<Vector3> vList,Vector3 currentPos)
+	{
+		float dis = 0;
+		int count = vList.Count;
+		
+		for(int i = 0 ; i < count ; i++ )
+		{
+			if( i == 0)
+			{
+				dis += Vector3.Distance(currentPos,vList[i]);
+			}else{
+				dis += Vector3.Distance(vList[i -1] , vList[i]);
+			}
+		}
+		
+		return dis;
+	}
+
 }

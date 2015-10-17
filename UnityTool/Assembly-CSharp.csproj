@@ -46,10 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\2D Sky\Scripts\CloudFlow.cs" />
+     <Compile Include="Assets\2D Sky\Scripts\SkyBG.cs" />
      <Compile Include="Assets\Script\NewBehaviourScript.cs" />
      <Compile Include="Assets\Script\Util\ColorConst.cs" />
      <Compile Include="Assets\Script\Util\Singleton.cs" />
      <Compile Include="Assets\Script\Util\Util.cs" />
+     <None Include="Assets\2D Sky\!Readme.txt" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity-5.0.1/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
