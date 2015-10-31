@@ -1,4 +1,7 @@
 ﻿using UnityEngine;
+/// <summary>
+/// 颜色常量
+/// </summary>
 public class ColorConst
 {
 	public const string RED = "[FF0000]";

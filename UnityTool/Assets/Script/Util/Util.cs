@@ -6,25 +6,10 @@ using System.Text;
 using System.Security.Cryptography;
 using System.Net.NetworkInformation;
 using System.Text.RegularExpressions;
-
-//using UJNet;
-//using UJNet.Data;
 using Object = UnityEngine.Object;
 
 public class Util
 {
-
-//	//不同平台下StreamingAssets的路径是不同的，这里需要注意一下。 
-//	public static readonly string PathURL = 
-//	#if UNITY_ANDROID 
-//	"jar:file://" + Application.dataPath + "!/assets/"; 
-//	#elif UNITY_IPHONE 
-//	Application.dataPath + "/Raw/"; 
-//	#elif UNITY_STANDALONE_WIN || UNITY_EDITOR 
-//	"file://" + Application.dataPath + "/StreamingAssets/"; 
-//	#else 
-//	string.Empty; 
-//	#endif
 
 	/// <summary>
 	/// 数字格式化，小于10 的 数字前面加0
@@ -53,6 +38,24 @@ public class Util
 		
 		string strTiem = NumFormatting (hours) + ":" + NumFormatting (minutes) + ":" + NumFormatting (seconds);  
 		return strTiem;
+	}
+
+	/// <summary>
+	/// DateTime转毫秒
+	/// </summary>
+	public static long DateTime2Mesc(DateTime date)
+	{
+		var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+		return Convert.ToInt64((date.ToUniversalTime() - epoch).TotalMilliseconds);
+	}
+
+	/// <summary>
+	/// 毫秒转DateTime
+	/// </summary>
+	public static DateTime Msec2DateTime (long t)
+	{
+		long utcTick = t * 10000 + new DateTime (1970, 1, 1, 0, 0, 0).Ticks;
+		return new DateTime (utcTick, DateTimeKind.Utc).ToLocalTime ();
 	}
 
 	/// <summary>
